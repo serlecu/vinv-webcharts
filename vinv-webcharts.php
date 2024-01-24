@@ -26,5 +26,20 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 function vinv_webcharts_vinv_webcharts_block_init() {
 	register_block_type( __DIR__ . '/build/default' );
+
+	// add chart.js library to 'default' block
+	wp_register_script(
+		'chartjs',
+		'https://cdn.jsdelivr.net/npm/chart.js',
+		array(),
+		'4.4.1',
+		array(
+			'strategy' => 'defer',
+			true
+		)
+	);
+
+	wp_enqueue_script( 'chartjs' );
+
 }
 add_action( 'init', 'vinv_webcharts_vinv_webcharts_block_init' );

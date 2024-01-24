@@ -1,1 +1,1 @@
-console.log("Hello World! (from create-block-vinv-webcharts block)");
+console.log("Hello World! (from create-block-vinv-webcharts block)"),new Chart(document.getElementById("myChart"),{type:"line",data:{datasets:[{label:"Category A",data:[10,20,30,40]},{label:"Category B",data:[10,40,20,30]}],labels:["Red","Blue","Yellow","Green"]},options:{maintainAspectRatio:!1,borderWidth:1},plugins:[]}),(new Connection).connect("connectionString");

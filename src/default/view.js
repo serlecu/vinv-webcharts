@@ -23,3 +23,35 @@
 /* eslint-disable no-console */
 console.log( 'Hello World! (from create-block-vinv-webcharts block)' );
 /* eslint-enable no-console */
+// import Chart from 'chartjs';
+
+const chart = new Chart(
+    document.getElementById('myChart'),
+    {
+        type: 'line',
+        data: {
+            datasets: [
+                {
+                    label: 'Category A',
+                    data: [10, 20, 30, 40],
+                    // backgroundColor: [pallette['red']],
+    
+                },
+                {
+                    label: 'Category B',
+                    data: [10, 40, 20, 30],
+                    // backgroundColor: [pallette['greyUPV']],
+                }
+            ],
+            labels: ['Red', 'Blue', 'Yellow', 'Green']
+        },
+        options:  {
+            maintainAspectRatio: false,
+    
+            borderWidth: 1
+        },
+        plugins: []
+});
+
+let con = new Connection()
+    .connect('connectionString');
